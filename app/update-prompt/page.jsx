@@ -1,18 +1,17 @@
 "use client";
-import { Suspense } from 'react';
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 
-import { useRouter , useSearchParams} from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@components/Form";
 
 const EditPrompt = () => {
   const router = useRouter();
-  
+
   const { data: session } = useSession();
 
-  const searchParams =  useSearchParams();
-  const promptId = searchParams.get('id');
+  const searchParams = useSearchParams();
+  const promptId = searchParams.get("id");
 
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
@@ -39,7 +38,7 @@ const EditPrompt = () => {
     setSubmitting(true);
 
     if (!promptId) {
-        alert('Prompt ID not Found')
+      alert("Prompt ID not Found");
     }
 
     try {
@@ -53,7 +52,7 @@ const EditPrompt = () => {
 
       if (response.ok) {
         router.push("/");
-        alert('Edited Successfully');
+        alert("Edited Successfully");
       }
     } catch (error) {
       console.log(error);
@@ -63,7 +62,6 @@ const EditPrompt = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
     <Form
       type="Edit"
       post={post}
@@ -71,10 +69,7 @@ const EditPrompt = () => {
       submitting={submitting}
       handleSubmit={updatePrompt}
     />
-    </Suspense>
   );
 };
 
 export default EditPrompt;
-
-
