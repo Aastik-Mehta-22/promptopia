@@ -110,7 +110,7 @@ const MyProfile = () => {
   };
 
   return (
-    <React.Suspense>
+    
       <Profile
       name='My'
       desc='Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination'
@@ -118,8 +118,8 @@ const MyProfile = () => {
       handleEdit={handleEdit}
       handleDelete={handleDelete}
     />
-    </React.Suspense>
-  );
+    
+  )
 };
 
 export default MyProfile;
