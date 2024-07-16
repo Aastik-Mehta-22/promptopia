@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from "react";
 import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 
@@ -62,7 +63,7 @@ const EditPrompt = () => {
   };
 
   return (
-    <React.Suspense>
+    <Suspense>
       <Form
         type="Edit"
         post={post}
@@ -70,7 +71,7 @@ const EditPrompt = () => {
         submitting={submitting}
         handleSubmit={updatePrompt}
       />
-    </React.Suspense>
+    </Suspense>
   );
 };
 
