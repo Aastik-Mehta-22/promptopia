@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
-
+import { Suspense } from "react"
 import PromptCard from "./PromptCard"
 
 const PromptCardList = ({data, handleTagClick}) =>{
