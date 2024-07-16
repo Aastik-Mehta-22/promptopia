@@ -110,13 +110,15 @@ const MyProfile = () => {
   };
 
   return (
-    <Profile
+    <React.Suspense>
+      <Profile
       name='My'
       desc='Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination'
       data={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
     />
+    </React.Suspense>
   );
 };
 
