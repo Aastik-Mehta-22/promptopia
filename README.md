@@ -47,3 +47,4 @@ Thank you for using Promptopia! We hope you enjoy your experience.
    
 
 
+![prompt](https://github.com/user-attachments/assets/565ce169-5a54-4fab-93c0-25f98baef60e)
